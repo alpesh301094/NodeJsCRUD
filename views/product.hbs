@@ -1,0 +1,24 @@
+<h1>Student Data</h1>
+<a href="/product/add-form/"><button class="btn btn-primary">ADD</button></a>
+<table class="table table-hover">
+<tr>
+	<th>ID</th>
+	<th>Name</th>
+	<th>Email</th>
+	<th>Phone</th>
+	<th>Action</th>
+{{#each products}}
+</tr>
+	<td>{{this.student_id}}</td>
+	<td>{{this.name}}</td>
+	<td>{{this.email}}</td>
+	<td>{{this.phone}}</td>
+	<td>
+		<a href="product/edit-form/{{this.student_id}}"><button class="btn btn-primary">Edit</button></a>
+		<a href="product/delete/{{this.student_id}}"><button class="btn btn-danger">Delete</button></a>
+	</td>
+<tr>
+{{/each}}
+	<td></td>
+</tr>
+</table>
